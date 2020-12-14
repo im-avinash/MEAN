@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+.info-text {
+  text-align: center;
+}
+
+mat-expansion-panel.mat-expansion-panel {
+  margin: 20px 0;
+}
