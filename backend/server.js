@@ -1,6 +1,10 @@
 const debug = require("debug")("node-angular");
 const http = require("http");
-const app = require("./backend/app");
+const app = require("./app");
+
+// const server = http.createServer((req, res) => {
+//   res.end("hello");
+// });
 
 const normalizePort = (val) => {
   var port = parseInt(val, 10);
@@ -25,7 +29,7 @@ const onError = (error) => {
       console.error(bind + "require elevated privileges");
       process.exit(1);
       break;
-    case "EADDRINSUE":
+    case "EADDRINUSE":
       console.error(bind + "is already in use");
       process.exit(1);
       break;
